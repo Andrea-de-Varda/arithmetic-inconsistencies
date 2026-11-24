@@ -1,0 +1,11 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "n_candidates": 3000,
+  "n_excluded_by_content": 77,
+  "n_incorrect_available": 422,
+  "n_correct_available": 2501,
+  "n_pool": 2000,
+  "n_pool_incorrect": 422,
+  "n_pool_correct": 1578,
+  "seed": 42
+}

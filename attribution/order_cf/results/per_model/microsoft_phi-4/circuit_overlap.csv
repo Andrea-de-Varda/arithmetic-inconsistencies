@@ -1,0 +1,2 @@
+model,n_units,K,jaccard_order_vs_operator,chance,chance_lo,chance_hi,ratio_to_chance,split_half_operator,split_half_order,ceiling,fraction_of_ceiling,n_kept_order
+microsoft/phi-4,716800,7168,0.349016655688341,0.0050251256281407045,0.00392156862745098,0.006246929178072577,69.45431448197985,0.8462330972311655,0.914018691588785,0.914018691588785,0.38184848832978,925

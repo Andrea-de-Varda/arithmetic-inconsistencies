@@ -1,0 +1,20 @@
+{
+  "model": "google/gemma-2-2b",
+  "n_pool": 2000,
+  "n_pool_correct": 1000,
+  "substrates": {
+    "resid": {
+      "predictor": "x1a",
+      "layer": 20,
+      "C": 0.001,
+      "oof_auc": 0.9620300000000002
+    },
+    "mlp": {
+      "predictor": "x1b",
+      "layer": 18,
+      "C": 0.001,
+      "oof_auc": 0.9619880000000001
+    }
+  },
+  "x_main_source": "crossfit"
+}

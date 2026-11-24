@@ -1,0 +1,6 @@
+Item-level correlations between circuit-overlap-with-symbolic and clean_match_gold
+  symbolic = numeric, K (fraction) = 0.01, K (units) = 4424
+
+  format=english  n=1723  acc=42.25%   rpb(sum_on_S)=+0.535 (p=3.32e-128)   rpb(cos)=+0.057 (p=0.0171)   rpb(jac)=+0.148 (p=7.34e-10)
+  format=spanish  n=1754  acc=44.64%   rpb(sum_on_S)=+0.354 (p=5.08e-53)   rpb(cos)=+0.076 (p=0.00135)   rpb(jac)=-0.447 (p=6.71e-87)
+  format=italian  n=1507  acc=17.78%   rpb(sum_on_S)=+0.500 (p=6.17e-96)   rpb(cos)=+0.205 (p=8.84e-16)   rpb(jac)=-0.095 (p=0.000213)

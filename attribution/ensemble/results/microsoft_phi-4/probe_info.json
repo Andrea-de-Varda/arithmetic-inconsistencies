@@ -1,0 +1,20 @@
+{
+  "model": "microsoft/phi-4",
+  "n_pool": 2000,
+  "n_pool_correct": 1640,
+  "substrates": {
+    "resid": {
+      "predictor": "x1a",
+      "layer": 32,
+      "C": 0.001,
+      "oof_auc": 0.9393207994579945
+    },
+    "mlp": {
+      "predictor": "x1b",
+      "layer": 28,
+      "C": 0.001,
+      "oof_auc": 0.9417699864498644
+    }
+  },
+  "x_main_source": "crossfit"
+}

@@ -1,0 +1,40 @@
+{
+  "model": "meta-llama/Llama-3.1-8B",
+  "n_correct": 1600,
+  "n_incorrect": 400,
+  "seed": 42,
+  "per_format": {
+    "numeric": {
+      "n_total": 20000,
+      "n_after_filters": 19913,
+      "n_correct_available": 19459,
+      "n_incorrect_available": 454,
+      "n_correct_sampled": 1600,
+      "n_incorrect_sampled": 400
+    },
+    "english": {
+      "n_total": 20000,
+      "n_after_filters": 16888,
+      "n_correct_available": 5975,
+      "n_incorrect_available": 10913,
+      "n_correct_sampled": 1600,
+      "n_incorrect_sampled": 400
+    },
+    "spanish": {
+      "n_total": 20000,
+      "n_after_filters": 17497,
+      "n_correct_available": 5369,
+      "n_incorrect_available": 12128,
+      "n_correct_sampled": 1600,
+      "n_incorrect_sampled": 400
+    },
+    "italian": {
+      "n_total": 20000,
+      "n_after_filters": 17941,
+      "n_correct_available": 3134,
+      "n_incorrect_available": 14807,
+      "n_correct_sampled": 1600,
+      "n_incorrect_sampled": 400
+    }
+  }
+}

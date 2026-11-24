@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Per-item attribution tensors (up to ~2 GB per model and format); regenerated on the cluster
+**/*_per_item.pt
+
+# Per-item probe features (residual + MLP activations); regenerated on the cluster
+attribution/ensemble/results/*/features/
+
+# SLURM logs
+logs/
+attribution/logs/
+
+# Model weights
+*.bin
+*.safetensors
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+.claude/

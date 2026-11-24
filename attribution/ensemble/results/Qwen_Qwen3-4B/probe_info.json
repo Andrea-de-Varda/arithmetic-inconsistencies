@@ -1,0 +1,20 @@
+{
+  "model": "Qwen/Qwen3-4B",
+  "n_pool": 2000,
+  "n_pool_correct": 1575,
+  "substrates": {
+    "resid": {
+      "predictor": "x1a",
+      "layer": 23,
+      "C": 0.001,
+      "oof_auc": 0.9264851540616246
+    },
+    "mlp": {
+      "predictor": "x1b",
+      "layer": 24,
+      "C": 0.001,
+      "oof_auc": 0.9249449112978524
+    }
+  },
+  "x_main_source": "crossfit"
+}

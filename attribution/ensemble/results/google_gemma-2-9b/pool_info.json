@@ -1,0 +1,11 @@
+{
+  "model": "google/gemma-2-9b",
+  "n_candidates": 3500,
+  "n_excluded_by_content": 93,
+  "n_incorrect_available": 445,
+  "n_correct_available": 2962,
+  "n_pool": 2000,
+  "n_pool_incorrect": 445,
+  "n_pool_correct": 1555,
+  "seed": 42
+}

@@ -1,0 +1,2 @@
+model,n_units,K,jaccard_order_vs_operator,chance,chance_lo,chance_hi,ratio_to_chance,split_half_operator,split_half_order,ceiling,fraction_of_ceiling,n_kept_order
+mistralai/Mistral-7B-v0.1,458752,4588,0.3117941386704789,0.00502565405798562,0.0036093186043968063,0.006471427004497094,62.04050956811223,0.8841889117043121,0.9249003566184183,0.9249003566184183,0.3371110589798532,902

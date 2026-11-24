@@ -1,0 +1,20 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "n_pool": 2000,
+  "n_pool_correct": 1045,
+  "substrates": {
+    "resid": {
+      "predictor": "x1a",
+      "layer": 20,
+      "C": 0.001,
+      "oof_auc": 0.9823973546431524
+    },
+    "mlp": {
+      "predictor": "x1b",
+      "layer": 19,
+      "C": 0.001,
+      "oof_auc": 0.9827260201908865
+    }
+  },
+  "x_main_source": "crossfit"
+}

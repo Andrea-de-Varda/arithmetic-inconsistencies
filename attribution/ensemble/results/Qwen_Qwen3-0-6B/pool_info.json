@@ -1,0 +1,11 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "n_candidates": 2500,
+  "n_excluded_by_content": 70,
+  "n_incorrect_available": 1099,
+  "n_correct_available": 1331,
+  "n_pool": 2000,
+  "n_pool_incorrect": 1000,
+  "n_pool_correct": 1000,
+  "seed": 42
+}

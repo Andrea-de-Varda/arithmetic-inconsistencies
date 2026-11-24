@@ -1,0 +1,20 @@
+{
+  "model": "allenai/Olmo-3-1125-32B",
+  "n_pool": 2000,
+  "n_pool_correct": 1785,
+  "substrates": {
+    "resid": {
+      "predictor": "x1a",
+      "layer": 23,
+      "C": 0.001,
+      "oof_auc": 0.9221523027815777
+    },
+    "mlp": {
+      "predictor": "x1b",
+      "layer": 34,
+      "C": 0.001,
+      "oof_auc": 0.9271005146244543
+    }
+  },
+  "x_main_source": "crossfit"
+}

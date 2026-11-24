@@ -1,0 +1,33 @@
+Symbolic-correctness split analysis — model=meta-llama/Llama-3.1-8B
+Top-K = 4588 units (fraction 1%); numeric n_kept=2000 (n_correct=1600, n_incorrect=400)
+
+== Jaccard top-1% among numeric-derived circuits ==
+  J(symbolic_balanced  , symbolic_balanced  ) = 1.000
+  J(symbolic_balanced  , symbolic_correct   ) = 0.734
+  J(symbolic_balanced  , symbolic_incorrect ) = 0.244
+  J(symbolic_correct   , symbolic_correct   ) = 1.000
+  J(symbolic_correct   , symbolic_incorrect ) = 0.170
+  J(symbolic_incorrect , symbolic_incorrect ) = 1.000
+
+  units only in symbolic_correct   : 3258
+  units only in symbolic_incorrect : 3258
+  units in both                    : 1330
+
+== Verbal aggregate vs numeric-derived top-1% ==
+  english   J(symbolic_balanced)=0.141  J(symbolic_correct)=0.139  J(symbolic_incorrect)=0.086
+  spanish   J(symbolic_balanced)=0.070  J(symbolic_correct)=0.071  J(symbolic_incorrect)=0.044
+  italian   J(symbolic_balanced)=0.064  J(symbolic_correct)=0.065  J(symbolic_incorrect)=0.037
+
+== Per-item r_pb(sum_on_S, accuracy) under each symbolic anchor ==
+  english   n=2000  acc=80%
+      symbolic_balanced   r_pb=+0.377  p=1.2e-68
+      symbolic_correct    r_pb=+0.383  p=8.7e-71
+      symbolic_incorrect  r_pb=-0.049  p=0.027
+  spanish   n=2000  acc=80%
+      symbolic_balanced   r_pb=+0.302  p=2.3e-43
+      symbolic_correct    r_pb=+0.296  p=1.1e-41
+      symbolic_incorrect  r_pb=+0.108  p=1.3e-06
+  italian   n=2000  acc=80%
+      symbolic_balanced   r_pb=+0.379  p=1.9e-69
+      symbolic_correct    r_pb=+0.384  p=2.6e-71
+      symbolic_incorrect  r_pb=+0.103  p=3.6e-06

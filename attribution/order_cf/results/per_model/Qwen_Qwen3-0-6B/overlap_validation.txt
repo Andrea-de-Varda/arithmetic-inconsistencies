@@ -1,0 +1,8 @@
+
+Qwen/Qwen3-0.6B
+  Jaccard(order, operator) = 0.170  (chance 0.0050 [0.0017, 0.0088], 34x; split-half ceiling 0.880 order / 0.888 operator; 19% of the order ceiling; n_kept=890)
+  english: n=699 correct=13  r_pb order=+0.087 vs operator=+0.105
+  spanish: n=1231 correct=8  r_pb order=+0.010 vs operator=+0.021
+  italian: n=874 correct=2  r_pb order=+0.007 vs operator=-0.010
+wrote order_cf/results/per_model/Qwen_Qwen3-0-6B/circuit_overlap.csv (1 rows)
+wrote order_cf/results/per_model/Qwen_Qwen3-0-6B/item_level_transfer.csv (3 rows)

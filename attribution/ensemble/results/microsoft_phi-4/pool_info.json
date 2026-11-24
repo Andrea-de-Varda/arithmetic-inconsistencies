@@ -1,0 +1,11 @@
+{
+  "model": "microsoft/phi-4",
+  "n_candidates": 20000,
+  "n_excluded_by_content": 467,
+  "n_incorrect_available": 360,
+  "n_correct_available": 19173,
+  "n_pool": 2000,
+  "n_pool_incorrect": 360,
+  "n_pool_correct": 1640,
+  "seed": 42
+}

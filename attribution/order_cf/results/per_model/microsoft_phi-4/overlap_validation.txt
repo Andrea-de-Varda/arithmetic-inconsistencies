@@ -1,0 +1,8 @@
+
+microsoft/phi-4
+  Jaccard(order, operator) = 0.349  (chance 0.0050 [0.0039, 0.0062], 69x; split-half ceiling 0.914 order / 0.846 operator; 38% of the order ceiling; n_kept=925)
+  english: n=1998 correct=1036  r_pb order=+0.156 vs operator=+0.374
+  spanish: n=1992 correct=1016  r_pb order=+0.442 vs operator=+0.407
+  italian: n=1979 correct=585  r_pb order=+0.505 vs operator=+0.449
+wrote order_cf/results/per_model/microsoft_phi-4/circuit_overlap.csv (1 rows)
+wrote order_cf/results/per_model/microsoft_phi-4/item_level_transfer.csv (3 rows)

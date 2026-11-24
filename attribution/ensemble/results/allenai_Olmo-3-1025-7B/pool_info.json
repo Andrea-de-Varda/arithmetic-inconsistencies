@@ -1,0 +1,11 @@
+{
+  "model": "allenai/Olmo-3-1025-7B",
+  "n_candidates": 5000,
+  "n_excluded_by_content": 127,
+  "n_incorrect_available": 439,
+  "n_correct_available": 4434,
+  "n_pool": 2000,
+  "n_pool_incorrect": 439,
+  "n_pool_correct": 1561,
+  "seed": 42
+}

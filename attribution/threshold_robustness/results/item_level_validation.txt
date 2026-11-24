@@ -1,0 +1,289 @@
+threshold robustness, item level: thresholds 0.5%, 1%, 2%, 5%
+
+Qwen/Qwen3-0.6B
+  L=28 d=3072 units=86016; K = 430 (0.5%), 860 (1%), 1720 (2%), 4301 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=699 correct=13
+    0.5% K=430: r_pb = +0.0633 (p=9.47e-02); float64 path +0.0632; max|fp16 - float64| loading = 2.90e-05 (mean |loading| 2.27e-02)
+      1% K=860: r_pb = +0.1046 (p=5.63e-03); float64 path +0.1046; max|fp16 - float64| loading = 5.91e-05 (mean |loading| 4.05e-02)
+    [check] 1% loading reproduces published sum_on_S on 699/699 items, max|diff| = 5.913e-05
+      2% K=1720: r_pb = +0.0859 (p=2.32e-02); float64 path +0.0859; max|fp16 - float64| loading = 3.93e-05 (mean |loading| 4.95e-02)
+      5% K=4301: r_pb = +0.1231 (p=1.11e-03); float64 path +0.1231; max|fp16 - float64| loading = 5.31e-05 (mean |loading| 4.85e-02)
+  spanish: n=1231 correct=8
+    0.5% K=430: r_pb = -0.0033 (p=9.07e-01); float64 path -0.0033; max|fp16 - float64| loading = 2.69e-05 (mean |loading| 1.33e-02)
+      1% K=860: r_pb = +0.0210 (p=4.62e-01); float64 path +0.0210; max|fp16 - float64| loading = 2.98e-05 (mean |loading| 1.68e-02)
+    [check] 1% loading reproduces published sum_on_S on 1231/1231 items, max|diff| = 2.980e-05
+      2% K=1720: r_pb = +0.0552 (p=5.30e-02); float64 path +0.0552; max|fp16 - float64| loading = 3.98e-05 (mean |loading| 1.78e-02)
+      5% K=4301: r_pb = +0.0131 (p=6.46e-01); float64 path +0.0131; max|fp16 - float64| loading = 5.73e-05 (mean |loading| 2.43e-02)
+  italian: n=874 correct=2
+    0.5% K=430: r_pb = -0.0157 (p=6.44e-01); float64 path -0.0157; max|fp16 - float64| loading = 1.46e-05 (mean |loading| 1.00e-02)
+      1% K=860: r_pb = -0.0096 (p=7.77e-01); float64 path -0.0096; max|fp16 - float64| loading = 4.14e-05 (mean |loading| 1.25e-02)
+    [check] 1% loading reproduces published sum_on_S on 874/874 items, max|diff| = 4.137e-05
+      2% K=1720: r_pb = -0.0280 (p=4.08e-01); float64 path -0.0280; max|fp16 - float64| loading = 7.23e-05 (mean |loading| 1.72e-02)
+      5% K=4301: r_pb = -0.0398 (p=2.40e-01); float64 path -0.0398; max|fp16 - float64| loading = 4.92e-05 (mean |loading| 1.71e-02)
+
+meta-llama/Llama-3.2-1B
+  L=16 d=8192 units=131072; K = 655 (0.5%), 1311 (1%), 2621 (2%), 6554 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1075 correct=35
+    0.5% K=655: r_pb = +0.2911 (p=1.91e-22); float64 path +0.2911; max|fp16 - float64| loading = 1.48e-05 (mean |loading| 8.23e-03)
+      1% K=1311: r_pb = +0.1136 (p=1.90e-04); float64 path +0.1136; max|fp16 - float64| loading = 2.72e-05 (mean |loading| 1.52e-02)
+    [check] 1% loading reproduces published sum_on_S on 1075/1075 items, max|diff| = 2.724e-05
+      2% K=2621: r_pb = +0.1038 (p=6.54e-04); float64 path +0.1038; max|fp16 - float64| loading = 2.58e-05 (mean |loading| 1.73e-02)
+      5% K=6554: r_pb = +0.2422 (p=8.06e-16); float64 path +0.2423; max|fp16 - float64| loading = 2.83e-05 (mean |loading| 1.88e-02)
+  spanish: n=1169 correct=14
+    0.5% K=655: r_pb = +0.0585 (p=4.54e-02); float64 path +0.0585; max|fp16 - float64| loading = 1.50e-05 (mean |loading| 9.32e-03)
+      1% K=1311: r_pb = +0.0613 (p=3.61e-02); float64 path +0.0613; max|fp16 - float64| loading = 1.51e-05 (mean |loading| 1.36e-02)
+    [check] 1% loading reproduces published sum_on_S on 1169/1169 items, max|diff| = 1.514e-05
+      2% K=2621: r_pb = +0.0478 (p=1.02e-01); float64 path +0.0478; max|fp16 - float64| loading = 2.74e-05 (mean |loading| 1.53e-02)
+      5% K=6554: r_pb = +0.0809 (p=5.65e-03); float64 path +0.0809; max|fp16 - float64| loading = 1.78e-05 (mean |loading| 1.72e-02)
+  italian: n=947 correct=3
+    0.5% K=655: r_pb = -0.0110 (p=7.35e-01); float64 path -0.0110; max|fp16 - float64| loading = 3.05e-05 (mean |loading| 1.41e-02)
+      1% K=1311: r_pb = -0.0209 (p=5.20e-01); float64 path -0.0209; max|fp16 - float64| loading = 2.99e-05 (mean |loading| 1.52e-02)
+    [check] 1% loading reproduces published sum_on_S on 947/947 items, max|diff| = 2.986e-05
+      2% K=2621: r_pb = -0.0166 (p=6.10e-01); float64 path -0.0166; max|fp16 - float64| loading = 2.50e-05 (mean |loading| 1.46e-02)
+      5% K=6554: r_pb = -0.0106 (p=7.46e-01); float64 path -0.0106; max|fp16 - float64| loading = 4.75e-05 (mean |loading| 2.05e-02)
+
+google/gemma-2-2b
+  L=26 d=9216 units=239616; K = 1198 (0.5%), 2396 (1%), 4792 (2%), 11981 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1922 correct=615
+    0.5% K=1198: r_pb = +0.5249 (p=1.39e-136); float64 path +0.5249; max|fp16 - float64| loading = 6.08e-05 (mean |loading| 3.60e-02)
+      1% K=2396: r_pb = +0.5393 (p=1.83e-145); float64 path +0.5393; max|fp16 - float64| loading = 5.76e-05 (mean |loading| 4.00e-02)
+    [check] 1% loading reproduces published sum_on_S on 1922/1922 items, max|diff| = 5.764e-05
+      2% K=4792: r_pb = +0.5319 (p=7.89e-141); float64 path +0.5319; max|fp16 - float64| loading = 5.75e-05 (mean |loading| 4.13e-02)
+      5% K=11981: r_pb = +0.5481 (p=3.59e-151); float64 path +0.5481; max|fp16 - float64| loading = 7.28e-05 (mean |loading| 4.60e-02)
+  spanish: n=1763 correct=134
+    0.5% K=1198: r_pb = +0.3112 (p=6.81e-41); float64 path +0.3112; max|fp16 - float64| loading = 5.97e-05 (mean |loading| 3.32e-02)
+      1% K=2396: r_pb = +0.3197 (p=3.43e-43); float64 path +0.3197; max|fp16 - float64| loading = 5.97e-05 (mean |loading| 3.47e-02)
+    [check] 1% loading reproduces published sum_on_S on 1763/1763 items, max|diff| = 5.972e-05
+      2% K=4792: r_pb = +0.3210 (p=1.57e-43); float64 path +0.3210; max|fp16 - float64| loading = 6.03e-05 (mean |loading| 3.57e-02)
+      5% K=11981: r_pb = +0.3009 (p=3.13e-38); float64 path +0.3010; max|fp16 - float64| loading = 7.67e-05 (mean |loading| 3.70e-02)
+  italian: n=1590 correct=57
+    0.5% K=1198: r_pb = +0.1723 (p=4.58e-12); float64 path +0.1723; max|fp16 - float64| loading = 6.09e-05 (mean |loading| 3.93e-02)
+      1% K=2396: r_pb = +0.1848 (p=1.12e-13); float64 path +0.1848; max|fp16 - float64| loading = 6.10e-05 (mean |loading| 4.16e-02)
+    [check] 1% loading reproduces published sum_on_S on 1590/1590 items, max|diff| = 6.104e-05
+      2% K=4792: r_pb = +0.1933 (p=7.56e-15); float64 path +0.1933; max|fp16 - float64| loading = 1.15e-04 (mean |loading| 4.35e-02)
+      5% K=11981: r_pb = +0.1798 (p=5.16e-13); float64 path +0.1797; max|fp16 - float64| loading = 1.23e-04 (mean |loading| 4.59e-02)
+
+meta-llama/Llama-3.2-3B
+  L=28 d=8192 units=229376; K = 1147 (0.5%), 2294 (1%), 4588 (2%), 11469 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1022 correct=32
+    0.5% K=1147: r_pb = +0.5422 (p=3.51e-79); float64 path +0.5422; max|fp16 - float64| loading = 2.80e-05 (mean |loading| 4.24e-03)
+      1% K=2294: r_pb = +0.5625 (p=2.38e-86); float64 path +0.5626; max|fp16 - float64| loading = 2.14e-05 (mean |loading| 5.01e-03)
+    [check] 1% loading reproduces published sum_on_S on 1022/1022 items, max|diff| = 2.140e-05
+      2% K=4588: r_pb = +0.5454 (p=2.80e-80); float64 path +0.5454; max|fp16 - float64| loading = 2.97e-05 (mean |loading| 6.30e-03)
+      5% K=11469: r_pb = +0.5630 (p=1.69e-86); float64 path +0.5630; max|fp16 - float64| loading = 5.40e-05 (mean |loading| 7.17e-03)
+  spanish: n=1216 correct=136
+    0.5% K=1147: r_pb = +0.4231 (p=5.50e-54); float64 path +0.4231; max|fp16 - float64| loading = 3.00e-05 (mean |loading| 1.54e-02)
+      1% K=2294: r_pb = +0.3950 (p=1.11e-46); float64 path +0.3950; max|fp16 - float64| loading = 2.93e-05 (mean |loading| 1.82e-02)
+    [check] 1% loading reproduces published sum_on_S on 1216/1216 items, max|diff| = 2.933e-05
+      2% K=4588: r_pb = +0.4060 (p=1.88e-49); float64 path +0.4060; max|fp16 - float64| loading = 3.03e-05 (mean |loading| 1.94e-02)
+      5% K=11469: r_pb = +0.4194 (p=5.36e-53); float64 path +0.4194; max|fp16 - float64| loading = 4.35e-05 (mean |loading| 2.22e-02)
+  italian: n=1745 correct=121
+    0.5% K=1147: r_pb = +0.2410 (p=1.78e-24); float64 path +0.2410; max|fp16 - float64| loading = 3.74e-05 (mean |loading| 1.89e-02)
+      1% K=2294: r_pb = +0.2465 (p=1.43e-25); float64 path +0.2465; max|fp16 - float64| loading = 5.23e-05 (mean |loading| 2.12e-02)
+    [check] 1% loading reproduces published sum_on_S on 1745/1745 items, max|diff| = 5.233e-05
+      2% K=4588: r_pb = +0.2538 (p=4.74e-27); float64 path +0.2538; max|fp16 - float64| loading = 5.28e-05 (mean |loading| 2.32e-02)
+      5% K=11469: r_pb = +0.2743 (p=1.68e-31); float64 path +0.2743; max|fp16 - float64| loading = 7.24e-05 (mean |loading| 2.60e-02)
+
+Qwen/Qwen3-4B
+  L=36 d=9728 units=350208; K = 1751 (0.5%), 3502 (1%), 7004 (2%), 17510 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1672 correct=683
+    0.5% K=1751: r_pb = +0.5499 (p=9.84e-133); float64 path +0.5498; max|fp16 - float64| loading = 5.48e-05 (mean |loading| 4.18e-02)
+      1% K=3502: r_pb = +0.5376 (p=7.16e-126); float64 path +0.5376; max|fp16 - float64| loading = 5.79e-05 (mean |loading| 4.64e-02)
+    [check] 1% loading reproduces published sum_on_S on 1672/1672 items, max|diff| = 5.788e-05
+      2% K=7004: r_pb = +0.5432 (p=6.10e-129); float64 path +0.5432; max|fp16 - float64| loading = 6.04e-05 (mean |loading| 4.66e-02)
+      5% K=17510: r_pb = +0.5537 (p=5.61e-135); float64 path +0.5537; max|fp16 - float64| loading = 7.05e-05 (mean |loading| 4.94e-02)
+  spanish: n=1774 correct=358
+    0.5% K=1751: r_pb = +0.3580 (p=8.95e-55); float64 path +0.3580; max|fp16 - float64| loading = 5.47e-05 (mean |loading| 2.24e-02)
+      1% K=3502: r_pb = +0.3760 (p=1.13e-60); float64 path +0.3760; max|fp16 - float64| loading = 5.61e-05 (mean |loading| 2.35e-02)
+    [check] 1% loading reproduces published sum_on_S on 1774/1774 items, max|diff| = 5.615e-05
+      2% K=7004: r_pb = +0.3693 (p=1.92e-58); float64 path +0.3693; max|fp16 - float64| loading = 5.23e-05 (mean |loading| 2.45e-02)
+      5% K=17510: r_pb = +0.3814 (p=1.62e-62); float64 path +0.3814; max|fp16 - float64| loading = 7.06e-05 (mean |loading| 2.85e-02)
+  italian: n=1728 correct=221
+    0.5% K=1751: r_pb = +0.4138 (p=1.83e-72); float64 path +0.4138; max|fp16 - float64| loading = 6.09e-05 (mean |loading| 2.93e-02)
+      1% K=3502: r_pb = +0.4232 (p=4.75e-76); float64 path +0.4232; max|fp16 - float64| loading = 5.23e-05 (mean |loading| 2.94e-02)
+    [check] 1% loading reproduces published sum_on_S on 1728/1728 items, max|diff| = 5.233e-05
+      2% K=7004: r_pb = +0.4223 (p=1.10e-75); float64 path +0.4223; max|fp16 - float64| loading = 5.22e-05 (mean |loading| 3.00e-02)
+      5% K=17510: r_pb = +0.4102 (p=4.31e-71); float64 path +0.4101; max|fp16 - float64| loading = 9.39e-05 (mean |loading| 3.37e-02)
+
+mistralai/Mistral-7B-v0.1
+  L=32 d=14336 units=458752; K = 2294 (0.5%), 4588 (1%), 9175 (2%), 22938 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=663 correct=16
+    0.5% K=2294: r_pb = +0.0153 (p=6.93e-01); float64 path +0.0153; max|fp16 - float64| loading = 1.36e-04 (mean |loading| 8.88e-02)
+      1% K=4588: r_pb = +0.0116 (p=7.65e-01); float64 path +0.0116; max|fp16 - float64| loading = 2.30e-04 (mean |loading| 9.61e-02)
+    [check] 1% loading reproduces published sum_on_S on 663/663 items, max|diff| = 2.303e-04
+      2% K=9175: r_pb = +0.0246 (p=5.27e-01); float64 path +0.0246; max|fp16 - float64| loading = 1.60e-04 (mean |loading| 9.05e-02)
+      5% K=22938: r_pb = +0.0222 (p=5.69e-01); float64 path +0.0222; max|fp16 - float64| loading = 1.60e-04 (mean |loading| 9.55e-02)
+  spanish: n=1812 correct=287
+    0.5% K=2294: r_pb = +0.1911 (p=2.29e-16); float64 path +0.1911; max|fp16 - float64| loading = 5.70e-05 (mean |loading| 2.51e-02)
+      1% K=4588: r_pb = +0.1970 (p=2.60e-17); float64 path +0.1970; max|fp16 - float64| loading = 5.67e-05 (mean |loading| 2.71e-02)
+    [check] 1% loading reproduces published sum_on_S on 1812/1812 items, max|diff| = 5.668e-05
+      2% K=9175: r_pb = +0.1726 (p=1.37e-13); float64 path +0.1726; max|fp16 - float64| loading = 8.94e-05 (mean |loading| 3.14e-02)
+      5% K=22938: r_pb = +0.1967 (p=2.86e-17); float64 path +0.1967; max|fp16 - float64| loading = 1.17e-04 (mean |loading| 3.43e-02)
+  italian: n=519 correct=8
+    0.5% K=2294: r_pb = -0.0642 (p=1.44e-01); float64 path -0.0642; max|fp16 - float64| loading = 1.31e-04 (mean |loading| 7.45e-02)
+      1% K=4588: r_pb = -0.0640 (p=1.45e-01); float64 path -0.0640; max|fp16 - float64| loading = 1.22e-04 (mean |loading| 7.61e-02)
+    [check] 1% loading reproduces published sum_on_S on 519/519 items, max|diff| = 1.217e-04
+      2% K=9175: r_pb = -0.0606 (p=1.68e-01); float64 path -0.0606; max|fp16 - float64| loading = 1.80e-04 (mean |loading| 8.30e-02)
+      5% K=22938: r_pb = -0.0494 (p=2.61e-01); float64 path -0.0494; max|fp16 - float64| loading = 2.46e-04 (mean |loading| 8.98e-02)
+
+allenai/Olmo-3-1025-7B
+  L=32 d=11008 units=352256; K = 1761 (0.5%), 3523 (1%), 7045 (2%), 17613 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1986 correct=815
+    0.5% K=1761: r_pb = +0.3699 (p=2.04e-65); float64 path +0.3699; max|fp16 - float64| loading = 9.24e-05 (mean |loading| 7.30e-02)
+      1% K=3523: r_pb = +0.3869 (p=6.42e-72); float64 path +0.3869; max|fp16 - float64| loading = 6.09e-05 (mean |loading| 7.76e-02)
+    [check] 1% loading reproduces published sum_on_S on 1986/1986 items, max|diff| = 6.086e-05
+      2% K=7045: r_pb = +0.3291 (p=2.27e-51); float64 path +0.3291; max|fp16 - float64| loading = 1.01e-04 (mean |loading| 8.96e-02)
+      5% K=17613: r_pb = +0.3178 (p=7.54e-48); float64 path +0.3178; max|fp16 - float64| loading = 2.04e-04 (mean |loading| 9.06e-02)
+  spanish: n=1755 correct=119
+    0.5% K=1761: r_pb = +0.1503 (p=2.51e-10); float64 path +0.1503; max|fp16 - float64| loading = 5.44e-05 (mean |loading| 3.18e-02)
+      1% K=3523: r_pb = +0.1411 (p=2.94e-09); float64 path +0.1411; max|fp16 - float64| loading = 5.77e-05 (mean |loading| 3.49e-02)
+    [check] 1% loading reproduces published sum_on_S on 1755/1755 items, max|diff| = 5.770e-05
+      2% K=7045: r_pb = +0.1378 (p=6.79e-09); float64 path +0.1378; max|fp16 - float64| loading = 8.98e-05 (mean |loading| 3.84e-02)
+      5% K=17613: r_pb = +0.1484 (p=4.17e-10); float64 path +0.1484; max|fp16 - float64| loading = 1.00e-04 (mean |loading| 4.16e-02)
+  italian: n=1322 correct=9
+    0.5% K=1761: r_pb = -0.0049 (p=8.58e-01); float64 path -0.0049; max|fp16 - float64| loading = 6.00e-05 (mean |loading| 1.53e-02)
+      1% K=3523: r_pb = -0.0417 (p=1.29e-01); float64 path -0.0417; max|fp16 - float64| loading = 5.94e-05 (mean |loading| 1.95e-02)
+    [check] 1% loading reproduces published sum_on_S on 1322/1322 items, max|diff| = 5.943e-05
+      2% K=7045: r_pb = -0.0454 (p=9.90e-02); float64 path -0.0454; max|fp16 - float64| loading = 5.87e-05 (mean |loading| 2.37e-02)
+      5% K=17613: r_pb = -0.0287 (p=2.96e-01); float64 path -0.0287; max|fp16 - float64| loading = 1.34e-04 (mean |loading| 2.65e-02)
+
+meta-llama/Llama-3.1-8B
+  L=32 d=14336 units=458752; K = 2294 (0.5%), 4588 (1%), 9175 (2%), 22938 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1687 correct=650
+    0.5% K=2294: r_pb = +0.4790 (p=1.69e-97); float64 path +0.4790; max|fp16 - float64| loading = 6.07e-05 (mean |loading| 5.20e-02)
+      1% K=4588: r_pb = +0.5041 (p=2.15e-109); float64 path +0.5041; max|fp16 - float64| loading = 6.09e-05 (mean |loading| 5.85e-02)
+    [check] 1% loading reproduces published sum_on_S on 1687/1687 items, max|diff| = 6.092e-05
+      2% K=9175: r_pb = +0.5069 (p=8.68e-111); float64 path +0.5069; max|fp16 - float64| loading = 1.15e-04 (mean |loading| 7.47e-02)
+      5% K=22938: r_pb = +0.5081 (p=2.04e-111); float64 path +0.5081; max|fp16 - float64| loading = 1.50e-04 (mean |loading| 7.78e-02)
+  spanish: n=1759 correct=585
+    0.5% K=2294: r_pb = +0.4168 (p=7.08e-75); float64 path +0.4168; max|fp16 - float64| loading = 3.05e-05 (mean |loading| 2.20e-02)
+      1% K=4588: r_pb = +0.4221 (p=6.39e-77); float64 path +0.4221; max|fp16 - float64| loading = 5.88e-05 (mean |loading| 2.63e-02)
+    [check] 1% loading reproduces published sum_on_S on 1759/1759 items, max|diff| = 5.877e-05
+      2% K=9175: r_pb = +0.4826 (p=2.66e-103); float64 path +0.4826; max|fp16 - float64| loading = 1.04e-04 (mean |loading| 3.04e-02)
+      5% K=22938: r_pb = +0.5039 (p=6.85e-114); float64 path +0.5039; max|fp16 - float64| loading = 8.48e-05 (mean |loading| 3.18e-02)
+  italian: n=1791 correct=328
+    0.5% K=2294: r_pb = +0.4178 (p=1.35e-76); float64 path +0.4178; max|fp16 - float64| loading = 6.04e-05 (mean |loading| 3.67e-02)
+      1% K=4588: r_pb = +0.4515 (p=1.12e-90); float64 path +0.4515; max|fp16 - float64| loading = 5.90e-05 (mean |loading| 4.18e-02)
+    [check] 1% loading reproduces published sum_on_S on 1791/1791 items, max|diff| = 5.901e-05
+      2% K=9175: r_pb = +0.4866 (p=4.05e-107); float64 path +0.4866; max|fp16 - float64| loading = 1.16e-04 (mean |loading| 4.71e-02)
+      5% K=22938: r_pb = +0.4714 (p=9.78e-100); float64 path +0.4714; max|fp16 - float64| loading = 1.63e-04 (mean |loading| 5.42e-02)
+
+Qwen/Qwen3-8B
+  L=36 d=12288 units=442368; K = 2212 (0.5%), 4424 (1%), 8847 (2%), 22118 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1723 correct=728
+    0.5% K=2212: r_pb = +0.5451 (p=5.80e-134); float64 path +0.5451; max|fp16 - float64| loading = 1.21e-04 (mean |loading| 1.01e-01)
+      1% K=4424: r_pb = +0.5350 (p=3.41e-128); float64 path +0.5350; max|fp16 - float64| loading = 1.22e-04 (mean |loading| 1.15e-01)
+    [check] 1% loading reproduces published sum_on_S on 1723/1723 items, max|diff| = 1.217e-04
+      2% K=8847: r_pb = +0.5350 (p=3.55e-128); float64 path +0.5350; max|fp16 - float64| loading = 2.31e-04 (mean |loading| 1.18e-01)
+      5% K=22118: r_pb = +0.5350 (p=3.37e-128); float64 path +0.5350; max|fp16 - float64| loading = 2.45e-04 (mean |loading| 1.20e-01)
+  spanish: n=1754 correct=783
+    0.5% K=2212: r_pb = +0.3749 (p=1.21e-59); float64 path +0.3749; max|fp16 - float64| loading = 6.08e-05 (mean |loading| 4.24e-02)
+      1% K=4424: r_pb = +0.3543 (p=5.09e-53); float64 path +0.3543; max|fp16 - float64| loading = 6.10e-05 (mean |loading| 4.96e-02)
+    [check] 1% loading reproduces published sum_on_S on 1754/1754 items, max|diff| = 6.098e-05
+      2% K=8847: r_pb = +0.3462 (p=1.52e-50); float64 path +0.3462; max|fp16 - float64| loading = 1.12e-04 (mean |loading| 5.45e-02)
+      5% K=22118: r_pb = +0.3349 (p=3.04e-47); float64 path +0.3349; max|fp16 - float64| loading = 1.24e-04 (mean |loading| 5.41e-02)
+  italian: n=1507 correct=268
+    0.5% K=2212: r_pb = +0.4962 (p=1.77e-94); float64 path +0.4962; max|fp16 - float64| loading = 1.19e-04 (mean |loading| 6.15e-02)
+      1% K=4424: r_pb = +0.4996 (p=6.11e-96); float64 path +0.4996; max|fp16 - float64| loading = 1.18e-04 (mean |loading| 6.60e-02)
+    [check] 1% loading reproduces published sum_on_S on 1507/1507 items, max|diff| = 1.175e-04
+      2% K=8847: r_pb = +0.5079 (p=1.28e-99); float64 path +0.5079; max|fp16 - float64| loading = 1.78e-04 (mean |loading| 7.09e-02)
+      5% K=22118: r_pb = +0.5123 (p=1.27e-101); float64 path +0.5123; max|fp16 - float64| loading = 2.25e-04 (mean |loading| 7.46e-02)
+
+google/gemma-2-9b
+  L=42 d=14336 units=602112; K = 3011 (0.5%), 6021 (1%), 12042 (2%), 30106 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1996 correct=1134
+    0.5% K=3011: r_pb = +0.3706 (p=5.03e-66); float64 path +0.3706; max|fp16 - float64| loading = 1.19e-04 (mean |loading| 1.02e-01)
+      1% K=6021: r_pb = +0.3669 (p=1.18e-64); float64 path +0.3669; max|fp16 - float64| loading = 1.18e-04 (mean |loading| 1.04e-01)
+    [check] 1% loading reproduces published sum_on_S on 1996/1996 items, max|diff| = 1.181e-04
+      2% K=12042: r_pb = +0.3095 (p=1.48e-45); float64 path +0.3095; max|fp16 - float64| loading = 1.43e-04 (mean |loading| 1.11e-01)
+      5% K=30106: r_pb = +0.2985 (p=2.38e-42); float64 path +0.2985; max|fp16 - float64| loading = 2.65e-04 (mean |loading| 1.15e-01)
+  spanish: n=1991 correct=966
+    0.5% K=3011: r_pb = +0.2985 (p=3.00e-42); float64 path +0.2985; max|fp16 - float64| loading = 9.86e-05 (mean |loading| 7.11e-02)
+      1% K=6021: r_pb = +0.2731 (p=2.16e-35); float64 path +0.2731; max|fp16 - float64| loading = 1.22e-04 (mean |loading| 7.23e-02)
+    [check] 1% loading reproduces published sum_on_S on 1991/1991 items, max|diff| = 1.217e-04
+      2% K=12042: r_pb = +0.2457 (p=9.34e-29); float64 path +0.2457; max|fp16 - float64| loading = 1.18e-04 (mean |loading| 7.68e-02)
+      5% K=30106: r_pb = +0.2362 (p=1.21e-26); float64 path +0.2362; max|fp16 - float64| loading = 1.91e-04 (mean |loading| 8.23e-02)
+  italian: n=1935 correct=352
+    0.5% K=3011: r_pb = +0.3034 (p=1.70e-42); float64 path +0.3034; max|fp16 - float64| loading = 1.11e-04 (mean |loading| 7.22e-02)
+      1% K=6021: r_pb = +0.2898 (p=9.33e-39); float64 path +0.2898; max|fp16 - float64| loading = 1.20e-04 (mean |loading| 7.68e-02)
+    [check] 1% loading reproduces published sum_on_S on 1935/1935 items, max|diff| = 1.202e-04
+      2% K=12042: r_pb = +0.2832 (p=5.20e-37); float64 path +0.2832; max|fp16 - float64| loading = 1.41e-04 (mean |loading| 8.40e-02)
+      5% K=30106: r_pb = +0.2908 (p=5.24e-39); float64 path +0.2908; max|fp16 - float64| loading = 2.54e-04 (mean |loading| 9.13e-02)
+
+microsoft/phi-4
+  L=40 d=17920 units=716800; K = 3584 (0.5%), 7168 (1%), 14336 (2%), 35840 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1998 correct=1036
+    0.5% K=3584: r_pb = +0.3810 (p=5.02e-70); float64 path +0.3810; max|fp16 - float64| loading = 1.22e-04 (mean |loading| 1.45e-01)
+      1% K=7168: r_pb = +0.3742 (p=1.92e-67); float64 path +0.3742; max|fp16 - float64| loading = 2.24e-04 (mean |loading| 1.51e-01)
+    [check] 1% loading reproduces published sum_on_S on 1998/1998 items, max|diff| = 0.000e+00
+      2% K=14336: r_pb = +0.3659 (p=2.40e-64); float64 path +0.3659; max|fp16 - float64| loading = 2.37e-04 (mean |loading| 1.55e-01)
+      5% K=35840: r_pb = +0.3354 (p=1.02e-53); float64 path +0.3354; max|fp16 - float64| loading = 3.10e-04 (mean |loading| 1.73e-01)
+  spanish: n=1992 correct=1016
+    0.5% K=3584: r_pb = +0.4032 (p=9.86e-79); float64 path +0.4032; max|fp16 - float64| loading = 6.10e-05 (mean |loading| 6.48e-02)
+      1% K=7168: r_pb = +0.4072 (p=2.09e-80); float64 path +0.4071; max|fp16 - float64| loading = 9.30e-05 (mean |loading| 6.85e-02)
+    [check] 1% loading reproduces published sum_on_S on 1992/1992 items, max|diff| = 0.000e+00
+      2% K=14336: r_pb = +0.4073 (p=1.79e-80); float64 path +0.4073; max|fp16 - float64| loading = 1.30e-04 (mean |loading| 7.56e-02)
+      5% K=35840: r_pb = +0.4107 (p=6.17e-82); float64 path +0.4108; max|fp16 - float64| loading = 1.98e-04 (mean |loading| 9.07e-02)
+  italian: n=1979 correct=585
+    0.5% K=3584: r_pb = +0.4515 (p=5.51e-100); float64 path +0.4515; max|fp16 - float64| loading = 1.14e-04 (mean |loading| 8.04e-02)
+      1% K=7168: r_pb = +0.4495 (p=5.24e-99); float64 path +0.4495; max|fp16 - float64| loading = 1.17e-04 (mean |loading| 8.47e-02)
+    [check] 1% loading reproduces published sum_on_S on 1979/1979 items, max|diff| = 0.000e+00
+      2% K=14336: r_pb = +0.4548 (p=1.30e-101); float64 path +0.4548; max|fp16 - float64| loading = 1.90e-04 (mean |loading| 9.23e-02)
+      5% K=35840: r_pb = +0.4669 (p=1.01e-107); float64 path +0.4669; max|fp16 - float64| loading = 1.85e-04 (mean |loading| 9.96e-02)
+
+Qwen/Qwen3-32B
+  L=64 d=25600 units=1638400; K = 8192 (0.5%), 16384 (1%), 32768 (2%), 81920 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1997 correct=1410
+    0.5% K=8192: r_pb = +0.2071 (p=8.70e-21); float64 path +0.2071; max|fp16 - float64| loading = 4.41e-04 (mean |loading| 4.09e-01)
+      1% K=16384: r_pb = +0.1319 (p=3.30e-09); float64 path +0.1319; max|fp16 - float64| loading = 5.31e-04 (mean |loading| 4.04e-01)
+    [check] 1% loading reproduces published sum_on_S on 1997/1997 items, max|diff| = 0.000e+00
+      2% K=32768: r_pb = +0.1387 (p=4.79e-10); float64 path +0.1387; max|fp16 - float64| loading = 7.22e-04 (mean |loading| 4.14e-01)
+      5% K=81920: r_pb = +0.0698 (p=1.80e-03); float64 path +0.0698; max|fp16 - float64| loading = 9.46e-04 (mean |loading| 4.77e-01)
+  spanish: n=1995 correct=1409
+    0.5% K=8192: r_pb = +0.0379 (p=9.03e-02); float64 path +0.0379; max|fp16 - float64| loading = 2.25e-04 (mean |loading| 1.88e-01)
+      1% K=16384: r_pb = +0.0390 (p=8.13e-02); float64 path +0.0390; max|fp16 - float64| loading = 3.53e-04 (mean |loading| 2.04e-01)
+    [check] 1% loading reproduces published sum_on_S on 1995/1995 items, max|diff| = 0.000e+00
+      2% K=32768: r_pb = +0.0550 (p=1.39e-02); float64 path +0.0551; max|fp16 - float64| loading = 3.97e-04 (mean |loading| 2.27e-01)
+      5% K=81920: r_pb = +0.0663 (p=3.06e-03); float64 path +0.0663; max|fp16 - float64| loading = 5.97e-04 (mean |loading| 2.62e-01)
+  italian: n=1994 correct=821
+    0.5% K=8192: r_pb = +0.2754 (p=4.96e-36); float64 path +0.2754; max|fp16 - float64| loading = 2.43e-04 (mean |loading| 2.32e-01)
+      1% K=16384: r_pb = +0.2838 (p=3.04e-38); float64 path +0.2838; max|fp16 - float64| loading = 4.56e-04 (mean |loading| 2.44e-01)
+    [check] 1% loading reproduces published sum_on_S on 1994/1994 items, max|diff| = 0.000e+00
+      2% K=32768: r_pb = +0.3002 (p=8.08e-43); float64 path +0.3002; max|fp16 - float64| loading = 6.39e-04 (mean |loading| 2.77e-01)
+      5% K=81920: r_pb = +0.3180 (p=4.24e-48); float64 path +0.3180; max|fp16 - float64| loading = 9.78e-04 (mean |loading| 2.85e-01)
+
+allenai/Olmo-3-1125-32B
+  L=64 d=27648 units=1769472; K = 8847 (0.5%), 17695 (1%), 35389 (2%), 88474 (5%)
+  [check] circuits nested across thresholds = True
+  english: n=1996 correct=1237
+    0.5% K=8847: r_pb = +0.3503 (p=1.02e-58); float64 path +0.3503; max|fp16 - float64| loading = 4.30e-04 (mean |loading| 3.67e-01)
+      1% K=17695: r_pb = +0.3543 (p=4.12e-60); float64 path +0.3543; max|fp16 - float64| loading = 6.59e-04 (mean |loading| 3.96e-01)
+    [check] 1% loading reproduces published sum_on_S on 1996/1996 items, max|diff| = 0.000e+00
+      2% K=35389: r_pb = +0.3179 (p=4.09e-48); float64 path +0.3179; max|fp16 - float64| loading = 6.70e-04 (mean |loading| 4.33e-01)
+      5% K=88474: r_pb = +0.3324 (p=1.08e-52); float64 path +0.3324; max|fp16 - float64| loading = 8.57e-04 (mean |loading| 4.09e-01)
+  spanish: n=1973 correct=616
+    0.5% K=8847: r_pb = +0.2927 (p=2.76e-40); float64 path +0.2927; max|fp16 - float64| loading = 2.03e-04 (mean |loading| 8.71e-02)
+      1% K=17695: r_pb = +0.2884 (p=4.19e-39); float64 path +0.2884; max|fp16 - float64| loading = 2.33e-04 (mean |loading| 9.49e-02)
+    [check] 1% loading reproduces published sum_on_S on 1973/1973 items, max|diff| = 0.000e+00
+      2% K=35389: r_pb = +0.2673 (p=1.22e-33); float64 path +0.2673; max|fp16 - float64| loading = 2.57e-04 (mean |loading| 9.89e-02)
+      5% K=88474: r_pb = +0.2450 (p=2.31e-28); float64 path +0.2450; max|fp16 - float64| loading = 4.18e-04 (mean |loading| 1.10e-01)
+  italian: n=1772 correct=123
+    0.5% K=8847: r_pb = +0.2399 (p=1.31e-24); float64 path +0.2399; max|fp16 - float64| loading = 4.17e-04 (mean |loading| 1.84e-01)
+      1% K=17695: r_pb = +0.2706 (p=4.15e-31); float64 path +0.2706; max|fp16 - float64| loading = 6.18e-04 (mean |loading| 1.89e-01)
+    [check] 1% loading reproduces published sum_on_S on 1772/1772 items, max|diff| = 0.000e+00
+      2% K=35389: r_pb = +0.2451 (p=1.16e-25); float64 path +0.2452; max|fp16 - float64| loading = 6.41e-04 (mean |loading| 2.16e-01)
+      5% K=88474: r_pb = +0.2542 (p=1.59e-27); float64 path +0.2542; max|fp16 - float64| loading = 7.31e-04 (mean |loading| 2.36e-01)
+
+13 models written to attribution/threshold_robustness/results

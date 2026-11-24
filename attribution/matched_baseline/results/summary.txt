@@ -1,0 +1,47 @@
+check: r_pb on S vs published all_pairs r_pb, 39 cells, max|diff| = 2.41e-05
+
+per format (1000 draws per cell; one-sided p_perm; low_n = fewer than 30 correct items)
+  English  cells=13  circuit r_pb median +0.37 [+0.01, +0.56]  random mean r_pb median +0.01 [-0.02, +0.08], 97.5% up to +0.35  above null p<0.05: 10/13  above every draw: 9/13  Wilcoxon (n=13) p = 0.00024
+  Spanish  cells=13  circuit r_pb median +0.29 [+0.02, +0.42]  random mean r_pb median +0.09 [+0.00, +0.18], 97.5% up to +0.41  above null p<0.05: 8/13  above every draw: 5/13  Wilcoxon (n=13) p = 0.00024
+  Italian  cells=13  circuit r_pb median +0.27 [-0.06, +0.50]  random mean r_pb median +0.06 [-0.01, +0.14], 97.5% up to +0.33  above null p<0.05: 9/13  above every draw: 6/13  Wilcoxon (n=13) p = 0.01
+
+per cell: model format n_correct r_real null_mean [2.5%, 97.5%] z p_perm
+  Qwen/Qwen3-0.6B              english     13* +0.105  +0.026 [-0.099, +0.167]  z=   1.2  p=0.1159
+  Qwen/Qwen3-0.6B              spanish      8* +0.021  +0.000 [-0.097, +0.100]  z=   0.4  p=0.3846
+  Qwen/Qwen3-0.6B              italian      2* -0.010  -0.007 [-0.048, +0.038]  z=  -0.1  p=0.5275
+  meta-llama/Llama-3.2-1B      english     35  +0.114  +0.029 [-0.121, +0.200]  z=   1.0  p=0.1658
+  meta-llama/Llama-3.2-1B      spanish     14* +0.061  +0.003 [-0.072, +0.078]  z=   1.6  p=0.0609
+  meta-llama/Llama-3.2-1B      italian      3* -0.021  +0.003 [-0.053, +0.064]  z=  -0.8  p=0.7802
+  google/gemma-2-2b            english    615  +0.539  +0.011 [-0.210, +0.194]  z=   5.0  p=0.0010
+  google/gemma-2-2b            spanish    134  +0.320  +0.018 [-0.143, +0.170]  z=   3.7  p=0.0010
+  google/gemma-2-2b            italian     57  +0.185  +0.033 [-0.078, +0.139]  z=   2.7  p=0.0020
+  meta-llama/Llama-3.2-3B      english     32  +0.563  +0.079 [-0.251, +0.346]  z=   3.1  p=0.0010
+  meta-llama/Llama-3.2-3B      spanish    136  +0.395  +0.099 [-0.129, +0.282]  z=   2.8  p=0.0010
+  meta-llama/Llama-3.2-3B      italian    121  +0.247  +0.060 [-0.098, +0.198]  z=   2.4  p=0.0020
+  Qwen/Qwen3-4B                english    683  +0.538  +0.008 [-0.204, +0.201]  z=   4.8  p=0.0010
+  Qwen/Qwen3-4B                spanish    358  +0.376  +0.107 [-0.099, +0.279]  z=   2.7  p=0.0010
+  Qwen/Qwen3-4B                italian    221  +0.423  +0.070 [-0.130, +0.246]  z=   3.5  p=0.0010
+  mistralai/Mistral-7B-v0.1    english     16* +0.012  -0.001 [-0.107, +0.134]  z=   0.2  p=0.3836
+  mistralai/Mistral-7B-v0.1    spanish    287  +0.197  +0.128 [-0.114, +0.354]  z=   0.5  p=0.3327
+  mistralai/Mistral-7B-v0.1    italian      8* -0.064  +0.013 [-0.149, +0.179]  z=  -1.0  p=0.8901
+  allenai/Olmo-3-1025-7B       english    815  +0.387  -0.002 [-0.177, +0.178]  z=   4.2  p=0.0010
+  allenai/Olmo-3-1025-7B       spanish    119  +0.141  +0.070 [-0.069, +0.209]  z=   1.0  p=0.1558
+  allenai/Olmo-3-1025-7B       italian      9* -0.042  +0.000 [-0.073, +0.071]  z=  -1.1  p=0.8242
+  meta-llama/Llama-3.1-8B      english    650  +0.504  +0.015 [-0.204, +0.287]  z=   4.1  p=0.0010
+  meta-llama/Llama-3.1-8B      spanish    585  +0.422  +0.184 [-0.159, +0.408]  z=   1.6  p=0.0190
+  meta-llama/Llama-3.1-8B      italian    328  +0.452  +0.138 [-0.114, +0.326]  z=   2.8  p=0.0010
+  Qwen/Qwen3-8B                english    728  +0.535  +0.009 [-0.249, +0.220]  z=   4.2  p=0.0010
+  Qwen/Qwen3-8B                spanish    783  +0.354  +0.101 [-0.132, +0.278]  z=   2.4  p=0.0020
+  Qwen/Qwen3-8B                italian    268  +0.500  +0.117 [-0.141, +0.310]  z=   3.4  p=0.0010
+  google/gemma-2-9b            english   1134  +0.367  -0.017 [-0.167, +0.120]  z=   5.0  p=0.0010
+  google/gemma-2-9b            spanish    966  +0.273  +0.054 [-0.093, +0.189]  z=   2.9  p=0.0010
+  google/gemma-2-9b            italian    352  +0.290  +0.095 [-0.064, +0.233]  z=   2.6  p=0.0040
+  microsoft/phi-4              english   1036  +0.374  -0.006 [-0.223, +0.160]  z=   4.0  p=0.0010
+  microsoft/phi-4              spanish   1016  +0.407  +0.090 [-0.153, +0.260]  z=   2.9  p=0.0010
+  microsoft/phi-4              italian    585  +0.449  +0.094 [-0.130, +0.259]  z=   3.7  p=0.0010
+  Qwen/Qwen3-32B               english   1410  +0.132  -0.008 [-0.149, +0.135]  z=   2.0  p=0.0300
+  Qwen/Qwen3-32B               spanish   1409  +0.039  +0.038 [-0.080, +0.154]  z=   0.0  p=0.5105
+  Qwen/Qwen3-32B               italian    821  +0.284  +0.054 [-0.128, +0.198]  z=   2.7  p=0.0010
+  allenai/Olmo-3-1125-32B      english   1237  +0.354  +0.003 [-0.132, +0.153]  z=   4.6  p=0.0010
+  allenai/Olmo-3-1125-32B      spanish    616  +0.288  +0.089 [-0.088, +0.233]  z=   2.4  p=0.0050
+  allenai/Olmo-3-1125-32B      italian    123  +0.271  +0.064 [-0.076, +0.193]  z=   3.0  p=0.0010

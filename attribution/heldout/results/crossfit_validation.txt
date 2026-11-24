@@ -1,0 +1,96 @@
+2000 main-fold ids -> 10 folds (seed 42), sizes [200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
+
+Qwen/Qwen3-0.6B
+  [check] aggregate rebuild: max|diff| = 2.328e-10, top-860 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.968-0.986 (mean 0.978)
+  english: 699 kept; reproduced published sum_on_S on 699 items, max|diff| = 5.913e-05
+  spanish: 1231 kept; reproduced published sum_on_S on 1231 items, max|diff| = 2.980e-05
+  italian: 874 kept; reproduced published sum_on_S on 874 items, max|diff| = 4.137e-05
+
+meta-llama/Llama-3.2-1B
+  [check] aggregate rebuild: max|diff| = 1.164e-10, top-1311 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.968-0.986 (mean 0.974)
+  english: 1075 kept; reproduced published sum_on_S on 1075 items, max|diff| = 2.724e-05
+  spanish: 1169 kept; reproduced published sum_on_S on 1169 items, max|diff| = 1.514e-05
+  italian: 947 kept; reproduced published sum_on_S on 947 items, max|diff| = 2.986e-05
+
+google/gemma-2-2b
+  [check] aggregate rebuild: max|diff| = 2.328e-10, top-2396 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.976-0.982 (mean 0.979)
+  english: 1922 kept; reproduced published sum_on_S on 1922 items, max|diff| = 5.764e-05
+  spanish: 1763 kept; reproduced published sum_on_S on 1763 items, max|diff| = 5.972e-05
+  italian: 1590 kept; reproduced published sum_on_S on 1590 items, max|diff| = 6.104e-05
+
+meta-llama/Llama-3.2-3B
+  [check] aggregate rebuild: max|diff| = 1.164e-10, top-2294 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.966-0.985 (mean 0.974)
+  english: 1022 kept; reproduced published sum_on_S on 1022 items, max|diff| = 2.140e-05
+  spanish: 1216 kept; reproduced published sum_on_S on 1216 items, max|diff| = 2.933e-05
+  italian: 1745 kept; reproduced published sum_on_S on 1745 items, max|diff| = 5.233e-05
+
+Qwen/Qwen3-4B
+  [check] aggregate rebuild: max|diff| = 2.328e-10, top-3502 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.974-0.982 (mean 0.978)
+  english: 1672 kept; reproduced published sum_on_S on 1672 items, max|diff| = 5.788e-05
+  spanish: 1774 kept; reproduced published sum_on_S on 1774 items, max|diff| = 5.615e-05
+  italian: 1728 kept; reproduced published sum_on_S on 1728 items, max|diff| = 5.233e-05
+
+mistralai/Mistral-7B-v0.1
+  [check] aggregate rebuild: max|diff| = 9.313e-10, top-4588 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.979-0.984 (mean 0.982)
+  english: 663 kept; reproduced published sum_on_S on 663 items, max|diff| = 2.303e-04
+  spanish: 1812 kept; reproduced published sum_on_S on 1812 items, max|diff| = 5.668e-05
+  italian: 519 kept; reproduced published sum_on_S on 519 items, max|diff| = 1.217e-04
+
+allenai/Olmo-3-1025-7B
+  [check] aggregate rebuild: max|diff| = 2.328e-10, top-3523 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.974-0.984 (mean 0.979)
+  english: 1986 kept; reproduced published sum_on_S on 1986 items, max|diff| = 6.086e-05
+  spanish: 1755 kept; reproduced published sum_on_S on 1755 items, max|diff| = 5.770e-05
+  italian: 1322 kept; reproduced published sum_on_S on 1322 items, max|diff| = 5.943e-05
+
+meta-llama/Llama-3.1-8B
+  [check] aggregate rebuild: max|diff| = 2.328e-10, top-4588 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.970-0.979 (mean 0.974)
+  english: 1687 kept; reproduced published sum_on_S on 1687 items, max|diff| = 6.092e-05
+  spanish: 1759 kept; reproduced published sum_on_S on 1759 items, max|diff| = 5.877e-05
+  italian: 1791 kept; reproduced published sum_on_S on 1791 items, max|diff| = 5.901e-05
+
+Qwen/Qwen3-8B
+  [check] aggregate rebuild: max|diff| = 2.328e-10, top-4424 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.979-0.984 (mean 0.981)
+  english: 1723 kept; reproduced published sum_on_S on 1723 items, max|diff| = 1.217e-04
+  spanish: 1754 kept; reproduced published sum_on_S on 1754 items, max|diff| = 6.098e-05
+  italian: 1507 kept; reproduced published sum_on_S on 1507 items, max|diff| = 1.175e-04
+
+google/gemma-2-9b
+  [check] aggregate rebuild: max|diff| = 4.657e-10, top-6021 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.940-0.961 (mean 0.955)
+  english: 1996 kept; reproduced published sum_on_S on 1996 items, max|diff| = 1.181e-04
+  spanish: 1991 kept; reproduced published sum_on_S on 1991 items, max|diff| = 1.217e-04
+  italian: 1935 kept; reproduced published sum_on_S on 1935 items, max|diff| = 1.202e-04
+
+microsoft/phi-4
+  [check] aggregate rebuild: max|diff| = 4.657e-10, top-7168 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.963-0.975 (mean 0.970)
+  english: 1998 kept; reproduced published sum_on_S on 1998 items, max|diff| = 0.000e+00
+  spanish: 1992 kept; reproduced published sum_on_S on 1992 items, max|diff| = 0.000e+00
+  italian: 1979 kept; reproduced published sum_on_S on 1979 items, max|diff| = 0.000e+00
+
+Qwen/Qwen3-32B
+  [check] aggregate rebuild: max|diff| = 9.313e-10, top-16384 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.965-0.971 (mean 0.968)
+  english: 1997 kept; reproduced published sum_on_S on 1997 items, max|diff| = 0.000e+00
+  spanish: 1995 kept; reproduced published sum_on_S on 1995 items, max|diff| = 0.000e+00
+  italian: 1994 kept; reproduced published sum_on_S on 1994 items, max|diff| = 0.000e+00
+
+allenai/Olmo-3-1125-32B
+  [check] aggregate rebuild: max|diff| = 1.863e-09, top-17695 Jaccard vs disk = 1.0000
+  [check] held-out circuit vs published circuit: Jaccard 0.974-0.982 (mean 0.978)
+  english: 1996 kept; reproduced published sum_on_S on 1996 items, max|diff| = 0.000e+00
+  spanish: 1973 kept; reproduced published sum_on_S on 1973 items, max|diff| = 0.000e+00
+  italian: 1772 kept; reproduced published sum_on_S on 1772 items, max|diff| = 0.000e+00
+
+wrote attribution/heldout/results/crossfit_item_loadings.csv  (62323 rows)
+wrote attribution/heldout/results/crossfit_circuit_stability.csv  (130 rows)
+wrote per-model loadings.csv + fold_stability.csv for 13 models

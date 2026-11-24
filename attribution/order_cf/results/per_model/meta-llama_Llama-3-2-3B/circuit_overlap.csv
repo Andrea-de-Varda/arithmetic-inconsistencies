@@ -1,0 +1,2 @@
+model,n_units,K,jaccard_order_vs_operator,chance,chance_lo,chance_hi,ratio_to_chance,split_half_operator,split_half_order,ceiling,fraction_of_ceiling,n_kept_order
+meta-llama/Llama-3.2-3B,229376,2294,0.1901426718547341,0.00502565405798562,0.003060778312199388,0.007244785949506037,37.834413125313084,0.8300757877941763,0.9061071873701704,0.9061071873701704,0.20984567223949793,398

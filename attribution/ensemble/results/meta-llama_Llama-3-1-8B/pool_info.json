@@ -1,0 +1,11 @@
+{
+  "model": "meta-llama/Llama-3.1-8B",
+  "n_candidates": 20000,
+  "n_excluded_by_content": 467,
+  "n_incorrect_available": 458,
+  "n_correct_available": 19075,
+  "n_pool": 2000,
+  "n_pool_incorrect": 458,
+  "n_pool_correct": 1542,
+  "seed": 42
+}

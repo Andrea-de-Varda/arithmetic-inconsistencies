@@ -1,0 +1,11 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "n_candidates": 2500,
+  "n_excluded_by_content": 70,
+  "n_incorrect_available": 955,
+  "n_correct_available": 1475,
+  "n_pool": 2000,
+  "n_pool_incorrect": 955,
+  "n_pool_correct": 1045,
+  "seed": 42
+}

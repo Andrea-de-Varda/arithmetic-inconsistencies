@@ -1,0 +1,20 @@
+{
+  "model": "meta-llama/Llama-3.2-3B",
+  "n_pool": 2000,
+  "n_pool_correct": 1541,
+  "substrates": {
+    "resid": {
+      "predictor": "x1a",
+      "layer": 21,
+      "C": 0.001,
+      "oof_auc": 0.8815329434102576
+    },
+    "mlp": {
+      "predictor": "x1b",
+      "layer": 6,
+      "C": 0.001,
+      "oof_auc": 0.8788566403560486
+    }
+  },
+  "x_main_source": "crossfit"
+}

@@ -1,0 +1,8 @@
+
+meta-llama/Llama-3.2-3B
+  Jaccard(order, operator) = 0.190  (chance 0.0050 [0.0031, 0.0072], 38x; split-half ceiling 0.906 order / 0.830 operator; 21% of the order ceiling; n_kept=398)
+  english: n=1022 correct=32  r_pb order=+0.405 vs operator=+0.563
+  spanish: n=1216 correct=136  r_pb order=+0.369 vs operator=+0.395
+  italian: n=1745 correct=121  r_pb order=+0.171 vs operator=+0.247
+wrote order_cf/results/per_model/meta-llama_Llama-3-2-3B/circuit_overlap.csv (1 rows)
+wrote order_cf/results/per_model/meta-llama_Llama-3-2-3B/item_level_transfer.csv (3 rows)

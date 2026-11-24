@@ -1,0 +1,8 @@
+
+google/gemma-2-2b
+  Jaccard(order, operator) = 0.286  (chance 0.0050 [0.0031, 0.0071], 57x; split-half ceiling 0.939 order / 0.885 operator; 30% of the order ceiling; n_kept=914)
+  english: n=1922 correct=615  r_pb order=+0.535 vs operator=+0.539
+  spanish: n=1763 correct=134  r_pb order=+0.345 vs operator=+0.320
+  italian: n=1590 correct=57  r_pb order=+0.198 vs operator=+0.185
+wrote order_cf/results/per_model/google_gemma-2-2b/circuit_overlap.csv (1 rows)
+wrote order_cf/results/per_model/google_gemma-2-2b/item_level_transfer.csv (3 rows)

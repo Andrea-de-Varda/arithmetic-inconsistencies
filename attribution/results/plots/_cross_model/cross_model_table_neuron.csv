@@ -1,0 +1,53 @@
+model_id,model_label,family,size_b,format,clean_accuracy,n_distinguishable,overlap_with_numeric,rpb_sum_on_S
+Qwen/Qwen3-0.6B,Qwen-3$_{0.6B}$,Qwen 3,0.6,numeric,0.5235,1676,,
+Qwen/Qwen3-0.6B,Qwen-3$_{0.6B}$,Qwen 3,0.6,english,0.0075,699,0.08448928121059268,0.105
+Qwen/Qwen3-0.6B,Qwen-3$_{0.6B}$,Qwen 3,0.6,spanish,0.0065,1231,0.04116222760290557,0.021
+Qwen/Qwen3-0.6B,Qwen-3$_{0.6B}$,Qwen 3,0.6,italian,0.0035,874,0.043689320388349516,-0.01
+meta-llama/Llama-3.2-1B,Llama-3.2$_{1B}$,Llama 3,1.0,numeric,0.4685,1613,,
+meta-llama/Llama-3.2-1B,Llama-3.2$_{1B}$,Llama 3,1.0,english,0.022,1075,0.05896607431340872,0.114
+meta-llama/Llama-3.2-1B,Llama-3.2$_{1B}$,Llama 3,1.0,spanish,0.0115,1169,0.02944640753828033,0.061
+meta-llama/Llama-3.2-1B,Llama-3.2$_{1B}$,Llama 3,1.0,italian,0.007,947,0.02863868183601412,-0.021
+google/gemma-2-2b,Gemma-2$_{2B}$,Gemma,2.0,numeric,0.5785,1894,,
+google/gemma-2-2b,Gemma-2$_{2B}$,Gemma,2.0,english,0.3085,1922,0.15525554484088716,0.539
+google/gemma-2-2b,Gemma-2$_{2B}$,Gemma,2.0,spanish,0.069,1763,0.08588261953319737,0.32
+google/gemma-2-2b,Gemma-2$_{2B}$,Gemma,2.0,italian,0.03,1590,0.07251566696508505,0.185
+meta-llama/Llama-3.2-3B,Llama-3.2$_{3B}$,Llama 3,3.0,numeric,0.9295,1994,,
+meta-llama/Llama-3.2-3B,Llama-3.2$_{3B}$,Llama 3,3.0,english,0.02,1022,0.08566019876952201,0.563
+meta-llama/Llama-3.2-3B,Llama-3.2$_{3B}$,Llama 3,3.0,spanish,0.07,1216,0.05012588693064775,0.395
+meta-llama/Llama-3.2-3B,Llama-3.2$_{3B}$,Llama 3,3.0,italian,0.061,1745,0.04178019981834696,0.247
+Qwen/Qwen3-4B,Qwen-3$_{4B}$,Qwen 3,4.0,numeric,0.845,1916,,
+Qwen/Qwen3-4B,Qwen-3$_{4B}$,Qwen 3,4.0,english,0.342,1672,0.17202141900937082,0.538
+Qwen/Qwen3-4B,Qwen-3$_{4B}$,Qwen 3,4.0,spanish,0.1795,1774,0.08690254500310367,0.376
+Qwen/Qwen3-4B,Qwen-3$_{4B}$,Qwen 3,4.0,italian,0.1105,1728,0.0762138905961893,0.423
+mistralai/Mistral-7B-v0.1,Mistral$_{7B}$,Mistral,7.0,numeric,0.604,1969,,
+mistralai/Mistral-7B-v0.1,Mistral$_{7B}$,Mistral,7.0,english,0.3695,1924,0.15160642570281124,0.012
+mistralai/Mistral-7B-v0.1,Mistral$_{7B}$,Mistral,7.0,spanish,0.144,1812,0.06672866775168565,0.197
+mistralai/Mistral-7B-v0.1,Mistral$_{7B}$,Mistral,7.0,italian,0.0675,1776,0.06326767091541136,-0.064
+allenai/Olmo-3-1025-7B,Olmo-3$_{7B}$,Olmo 3,7.0,numeric,0.9115,1999,,
+allenai/Olmo-3-1025-7B,Olmo-3$_{7B}$,Olmo 3,7.0,english,0.409,1986,0.210444940731833,0.387
+allenai/Olmo-3-1025-7B,Olmo-3$_{7B}$,Olmo 3,7.0,spanish,0.0615,1755,0.09071207430340557,0.141
+allenai/Olmo-3-1025-7B,Olmo-3$_{7B}$,Olmo 3,7.0,italian,0.0055,1322,0.07147201946472019,-0.042
+meta-llama/Llama-3.1-8B,Llama-3.1$_{8B}$,Llama 3,8.0,numeric,0.9715,2000,,
+meta-llama/Llama-3.1-8B,Llama-3.1$_{8B}$,Llama 3,8.0,english,0.325,1687,0.13733267228557264,0.504
+meta-llama/Llama-3.1-8B,Llama-3.1$_{8B}$,Llama 3,8.0,spanish,0.2935,1759,0.07838758961100012,0.422
+meta-llama/Llama-3.1-8B,Llama-3.1$_{8B}$,Llama 3,8.0,italian,0.1655,1791,0.07121176745272005,0.452
+Qwen/Qwen3-8B,Qwen-3$_{8B}$,Qwen 3,8.0,numeric,0.8445,1933,,
+Qwen/Qwen3-8B,Qwen-3$_{8B}$,Qwen 3,8.0,english,0.3645,1723,0.15073481597086746,0.535
+Qwen/Qwen3-8B,Qwen-3$_{8B}$,Qwen 3,8.0,spanish,0.392,1754,0.08298653610771115,0.354
+Qwen/Qwen3-8B,Qwen-3$_{8B}$,Qwen 3,8.0,italian,0.1345,1507,0.07968273337400854,0.5
+google/gemma-2-9b,Gemma-2$_{9B}$,Gemma,9.0,numeric,0.8735,1999,,
+google/gemma-2-9b,Gemma-2$_{9B}$,Gemma,9.0,english,0.5675,1996,0.21648651378927164,0.367
+google/gemma-2-9b,Gemma-2$_{9B}$,Gemma,9.0,spanish,0.484,1991,0.13711048158640227,0.273
+google/gemma-2-9b,Gemma-2$_{9B}$,Gemma,9.0,italian,0.1765,1935,0.11438089950027762,0.29
+microsoft/phi-4,Phi-4,Phi-4,14.0,numeric,0.9845,2000,,
+microsoft/phi-4,Phi-4,Phi-4,14.0,english,0.519,1998,0.12819705674037932,0.374
+microsoft/phi-4,Phi-4,Phi-4,14.0,spanish,0.508,1992,0.05957132298595713,0.407
+microsoft/phi-4,Phi-4,Phi-4,14.0,italian,0.293,1979,0.05280164500257031,0.449
+Qwen/Qwen3-32B,Qwen-3$_{32B}$,Qwen 3,32.0,numeric,0.946,1999,,
+Qwen/Qwen3-32B,Qwen-3$_{32B}$,Qwen 3,32.0,english,0.705,1997,0.14493361285814116,0.132
+Qwen/Qwen3-32B,Qwen-3$_{32B}$,Qwen 3,32.0,spanish,0.7065,1995,0.10092729471845183,0.039
+Qwen/Qwen3-32B,Qwen-3$_{32B}$,Qwen 3,32.0,italian,0.4125,1994,0.09577314071696094,0.284
+allenai/Olmo-3-1125-32B,Olmo-3$_{32B}$,Olmo 3,32.0,numeric,0.988,2000,,
+allenai/Olmo-3-1125-32B,Olmo-3$_{32B}$,Olmo 3,32.0,english,0.6195,1996,0.1939543200296886,0.354
+allenai/Olmo-3-1125-32B,Olmo-3$_{32B}$,Olmo 3,32.0,spanish,0.3095,1973,0.10245786735615713,0.288
+allenai/Olmo-3-1125-32B,Olmo-3$_{32B}$,Olmo 3,32.0,italian,0.0625,1772,0.07975347815474737,0.271
